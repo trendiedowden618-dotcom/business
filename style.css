@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -16,7 +17,6 @@ body {
     color: #222222;
     line-height: 1.6;
 }
-
 
 
 
@@ -76,7 +76,6 @@ a:focus-visible {
 
 
 
-
 main {
     flex: 1;
 }
@@ -129,7 +128,6 @@ footer p {
     font-size: 17px;
     line-height: 1.8;
 }
-
 
 
 
@@ -222,7 +220,6 @@ footer p {
 
 
 
-
 .table-title {
     margin: 45px 0 20px;
     text-align: center;
@@ -270,7 +267,6 @@ tbody tr:hover {
 
 
 
-
 .inspiration {
     max-width: 850px;
     margin: 45px auto;
@@ -295,7 +291,6 @@ tbody tr:hover {
     margin: 20px auto;
     border-radius: 12px;
 }
-
 
 
 .contact {
@@ -393,15 +388,18 @@ tbody tr:hover {
 
 @media (max-width: 600px) {
     header {
+        width: 100%;
+        min-height: auto;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         gap: 12px;
-        padding: 15px 12px;
+        padding: 15px 10px;
     }
 
     header img {
-        width: 65px;
-        height: 65px;
+        width: 100px;
+        height: 100px;
     }
 
     nav {
@@ -410,37 +408,67 @@ tbody tr:hover {
     }
 
     nav ul {
+        display: flex;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 8px;
     }
 
-    nav a {
-        padding: 9px 12px;
-        font-size: 14px;
+    nav li {
+        margin: 0;
+        padding: 0;
     }
 
+    nav a {
+        display: block;
+        padding: 8px 12px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+ 
+
     .home {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding: 35px 20px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25px;
+        width: 100%;
+        padding: 30px 20px;
         text-align: center;
     }
 
     .home img {
-        width: 155px;
-        height: 170px;
+        display: block;
+        width: 180px;
+        max-width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    .intro {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
     }
 
     .intro h1 {
-        font-size: 26px;
+        font-size: 28px;
+        line-height: 1.3;
     }
 
     .intro p {
         font-size: 16px;
+        line-height: 1.7;
     }
 
     .about {
-        padding: 30px 22px;
+        width: 100%;
+        padding: 30px 20px;
     }
 
     .about h1,
@@ -456,6 +484,8 @@ tbody tr:hover {
     .about ul {
         font-size: 16px;
     }
+
+    /* Portfolio page */
 
     .portfolio {
         padding: 30px 15px 40px;
@@ -479,8 +509,15 @@ tbody tr:hover {
         font-size: 13px;
     }
 
+
+
     .table-title {
         font-size: 23px;
+    }
+
+    .table-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
     }
 
     .table-wrapper table {
@@ -492,6 +529,8 @@ tbody tr:hover {
         padding: 9px 7px;
         font-size: 13px;
     }
+
+
 
     .inspiration {
         width: 90%;
@@ -506,15 +545,14 @@ tbody tr:hover {
         max-height: 280px;
     }
 
-    .contact {
-        padding: 35px 15px;
-    }
 
-    .contact h1 {
-        font-size: 30px;
+
+    .contact {
+        padding: 30px 15px;
     }
 
     .contact-info {
+        width: 100%;
         padding: 20px 15px;
     }
 
@@ -522,6 +560,8 @@ tbody tr:hover {
     .contact-message p {
         font-size: 15px;
     }
+
+
 
     footer {
         padding: 18px 12px;
@@ -533,8 +573,12 @@ tbody tr:hover {
 }
 
 
-
 @media (max-width: 380px) {
+    header img {
+        width: 85px;
+        height: 85px;
+    }
+
     nav ul {
         gap: 5px;
     }
@@ -542,6 +586,15 @@ tbody tr:hover {
     nav a {
         padding: 8px 9px;
         font-size: 12px;
+    }
+
+    .home {
+        padding: 25px 15px;
+    }
+
+    .home img {
+        width: 155px;
+        height: 170px;
     }
 
     .img {
@@ -552,10 +605,6 @@ tbody tr:hover {
         height: 220px;
     }
 
-    .home {
-        padding: 25px 15px;
-    }
-
     .about {
         padding: 25px 16px;
     }
@@ -564,8 +613,6 @@ tbody tr:hover {
         padding: 18px 12px;
     }
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
     html {
